@@ -1,1 +1,38 @@
+1. 安装anaconda， 一个集成了多样的研究工具包的软件
+   
+保存好安装路径，一路默认安装， 打开anaconda prompt， 如果默认出现的为（base），那么就是安装成功
 
+2. 安装显卡驱动 + coda 工具包 
+检查显卡驱动是否正确安装： 使用任务管理器，检查GPU 是否正确显示型号，如果正确显示型号，那么显卡驱动就是正确安装的
+
+3. 安装pytorch 之前： 学习如何正确管理环境 
+由于项目有着不同的环境，比如一些基于pytorch0.4 另外一些基于 1.0，那么我们需要正确的管理环境来分别对不同的项目进行运行和管理
+(base) C:\Users\21293>conda create -n pytorch python=3.6 创建python 3.6 的环境
+-n: name  python =3.6   
+激活环境  ：
+# To activate this environment, use
+#
+#     $ conda activate pytorch
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+激活环境后用 pip list 检查包配置环境 
+
+(base) C:\Users\21293>conda activate pytorch
+
+(pytorch) C:\Users\21293>pip list
+Package      Version
+------------ ---------
+certifi      2021.5.30
+pip          21.2.2
+setuptools   58.0.4
+wheel        0.37.1
+wincertstore 0.2
+
+4.安装conda ，激活pytorch 环境：
+pytorch官网选择合适自己的系统的pytorch版本  
+这里由于环境是python 3.6 ，所以选择的conda版本是1.4（本打算找1.3，但是没有，它的cuda版本是9.2）
+conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=9.2 -c pytorch
