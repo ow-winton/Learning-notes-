@@ -70,3 +70,6 @@ conda install -c conda-forge nb_conda
 ## Finally, attempt to install nb_conda from the conda-forge channel: conda install -c conda-forge nb_conda
 
 最终解决问题
+
+![Alt text](image/微信图片_20240221194500.png)
+
